@@ -33,11 +33,11 @@
 			txtTitle = new TextBox();
 			txtNote = new TextBox();
 			btnClear = new Button();
-			dataGridView1 = new DataGridView();
+			dGVNotes = new DataGridView();
 			btnRead = new Button();
 			btnDelete = new Button();
 			btnSubmit = new Button();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)dGVNotes).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -83,14 +83,14 @@
 			btnClear.UseVisualStyleBackColor = true;
 			btnClear.Click += btnClear_Click;
 			// 
-			// dataGridView1
+			// dGVNotes
 			// 
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Location = new Point(330, 20);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.RowTemplate.Height = 25;
-			dataGridView1.Size = new Size(226, 208);
-			dataGridView1.TabIndex = 5;
+			dGVNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dGVNotes.Location = new Point(330, 20);
+			dGVNotes.Name = "dGVNotes";
+			dGVNotes.RowTemplate.Height = 25;
+			dGVNotes.Size = new Size(279, 208);
+			dGVNotes.TabIndex = 5;
 			// 
 			// btnRead
 			// 
@@ -103,7 +103,7 @@
 			// 
 			// btnDelete
 			// 
-			btnDelete.Location = new Point(446, 234);
+			btnDelete.Location = new Point(499, 234);
 			btnDelete.Name = "btnDelete";
 			btnDelete.Size = new Size(110, 23);
 			btnDelete.TabIndex = 8;
@@ -118,16 +118,17 @@
 			btnSubmit.TabIndex = 9;
 			btnSubmit.Text = "Submit";
 			btnSubmit.UseVisualStyleBackColor = true;
+			btnSubmit.Click += btnSubmit_Click;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(572, 269);
+			ClientSize = new Size(621, 269);
 			Controls.Add(btnSubmit);
 			Controls.Add(btnDelete);
 			Controls.Add(btnRead);
-			Controls.Add(dataGridView1);
+			Controls.Add(dGVNotes);
 			Controls.Add(btnClear);
 			Controls.Add(txtNote);
 			Controls.Add(txtTitle);
@@ -136,7 +137,7 @@
 			Name = "Form1";
 			Text = "Form1";
 			Load += Form1_Load;
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+			((System.ComponentModel.ISupportInitialize)dGVNotes).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -148,7 +149,7 @@
 		private TextBox txtTitle;
 		private TextBox txtNote;
 		private Button btnClear;
-		private DataGridView dataGridView1;
+		private DataGridView dGVNotes;
 		private Button btnRead;
 		private Button btnDelete;
 		private Button btnSubmit;
