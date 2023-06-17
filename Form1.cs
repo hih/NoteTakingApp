@@ -44,5 +44,12 @@ namespace NoteTakingApp
 				txtNote.Text = dataTable.Rows[index].ItemArray[1].ToString();
 			}
 		}
+
+		private void btnDelete_Click(object sender, EventArgs e)
+		{
+			int index = dGVNotes.CurrentCell.RowIndex;
+
+			dataTable.Rows[index].Delete();
+		}
 	}
 }
