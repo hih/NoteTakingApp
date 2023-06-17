@@ -33,5 +33,16 @@ namespace NoteTakingApp
 			txtTitle.Clear();
 			txtNote.Clear();
 		}
+
+		private void btnRead_Click(object sender, EventArgs e)
+		{
+			int index = dGVNotes.CurrentCell.RowIndex;
+
+			if (index > -1)
+			{
+				txtTitle.Text = dataTable.Rows[index].ItemArray[0].ToString();
+				txtNote.Text = dataTable.Rows[index].ItemArray[1].ToString();
+			}
+		}
 	}
 }

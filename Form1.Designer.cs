@@ -100,6 +100,7 @@
 			btnRead.TabIndex = 6;
 			btnRead.Text = "Read";
 			btnRead.UseVisualStyleBackColor = true;
+			btnRead.Click += btnRead_Click;
 			// 
 			// btnDelete
 			// 
