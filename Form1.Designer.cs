@@ -32,11 +32,11 @@
 			label2 = new Label();
 			txtTitle = new TextBox();
 			txtNote = new TextBox();
-			btnSubmit = new Button();
+			btnClear = new Button();
 			dataGridView1 = new DataGridView();
-			button1 = new Button();
-			button3 = new Button();
-			button2 = new Button();
+			btnRead = new Button();
+			btnDelete = new Button();
+			btnSubmit = new Button();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
 			SuspendLayout();
 			// 
@@ -73,14 +73,14 @@
 			txtNote.Size = new Size(226, 168);
 			txtNote.TabIndex = 3;
 			// 
-			// btnSubmit
+			// btnClear
 			// 
-			btnSubmit.Location = new Point(67, 234);
-			btnSubmit.Name = "btnSubmit";
-			btnSubmit.Size = new Size(110, 23);
-			btnSubmit.TabIndex = 4;
-			btnSubmit.Text = "Submit";
-			btnSubmit.UseVisualStyleBackColor = true;
+			btnClear.Location = new Point(67, 234);
+			btnClear.Name = "btnClear";
+			btnClear.Size = new Size(110, 23);
+			btnClear.TabIndex = 4;
+			btnClear.Text = "Clear";
+			btnClear.UseVisualStyleBackColor = true;
 			// 
 			// dataGridView1
 			// 
@@ -91,49 +91,51 @@
 			dataGridView1.Size = new Size(226, 208);
 			dataGridView1.TabIndex = 5;
 			// 
-			// button1
+			// btnRead
 			// 
-			button1.Location = new Point(330, 234);
-			button1.Name = "button1";
-			button1.Size = new Size(110, 23);
-			button1.TabIndex = 6;
-			button1.Text = "Read";
-			button1.UseVisualStyleBackColor = true;
+			btnRead.Location = new Point(330, 234);
+			btnRead.Name = "btnRead";
+			btnRead.Size = new Size(110, 23);
+			btnRead.TabIndex = 6;
+			btnRead.Text = "Read";
+			btnRead.UseVisualStyleBackColor = true;
 			// 
-			// button3
+			// btnDelete
 			// 
-			button3.Location = new Point(446, 234);
-			button3.Name = "button3";
-			button3.Size = new Size(110, 23);
-			button3.TabIndex = 8;
-			button3.Text = "Delete";
-			button3.UseVisualStyleBackColor = true;
+			btnDelete.Location = new Point(446, 234);
+			btnDelete.Name = "btnDelete";
+			btnDelete.Size = new Size(110, 23);
+			btnDelete.TabIndex = 8;
+			btnDelete.Text = "Delete";
+			btnDelete.UseVisualStyleBackColor = true;
 			// 
-			// button2
+			// btnSubmit
 			// 
-			button2.Location = new Point(183, 234);
-			button2.Name = "button2";
-			button2.Size = new Size(110, 23);
-			button2.TabIndex = 9;
-			button2.Text = "Submit";
-			button2.UseVisualStyleBackColor = true;
+			btnSubmit.Location = new Point(183, 234);
+			btnSubmit.Name = "btnSubmit";
+			btnSubmit.Size = new Size(110, 23);
+			btnSubmit.TabIndex = 9;
+			btnSubmit.Text = "Submit";
+			btnSubmit.UseVisualStyleBackColor = true;
+			btnSubmit.Click += button2_Click;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(572, 269);
-			Controls.Add(button2);
-			Controls.Add(button3);
-			Controls.Add(button1);
-			Controls.Add(dataGridView1);
 			Controls.Add(btnSubmit);
+			Controls.Add(btnDelete);
+			Controls.Add(btnRead);
+			Controls.Add(dataGridView1);
+			Controls.Add(btnClear);
 			Controls.Add(txtNote);
 			Controls.Add(txtTitle);
 			Controls.Add(label2);
 			Controls.Add(label1);
 			Name = "Form1";
 			Text = "Form1";
+			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
@@ -145,10 +147,10 @@
 		private Label label2;
 		private TextBox txtTitle;
 		private TextBox txtNote;
-		private Button btnSubmit;
+		private Button btnClear;
 		private DataGridView dataGridView1;
-		private Button button1;
-		private Button button3;
-		private Button button2;
+		private Button btnRead;
+		private Button btnDelete;
+		private Button btnSubmit;
 	}
 }
